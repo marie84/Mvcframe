@@ -4,11 +4,16 @@
  */
 
 /**
- * Add static entries in the template file. 
+ * Add static entries for use in the template file. 
  */
-$mv->data['header'] = '<h1>Header: Mvcframe</h1>';
+$mv->data['header'] = 'Mvcframe';
+$mv->data['slogan'] = 'A PHP-based MVC-inspired CMF';
+$mv->data['favicon']      = theme_url('starlogo.png');
+$mv->data['logo']         = theme_url('starlogo.png');
+$mv->data['logo_width']   = 80;
+$mv->data['logo_height']  = 80;
 $mv->data['footer'] = <<<EOD
-<p>Footer: &copy; Mvcframe by Marie. 2013</p>
+<p>Mvcframe &copy; by Marie. 2014. </p>
 
 <p>Tools: 
 <a href="http://validator.w3.org/check/referer">html5</a>
@@ -36,4 +41,3 @@ $mv->data['footer'] = <<<EOD
 </p>
 
 EOD;
-

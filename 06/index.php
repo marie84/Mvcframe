@@ -5,7 +5,7 @@
 define('MVCFRAME_INSTALL_PATH', dirname(__FILE__));
 define('MVCFRAME_SITE_PATH', MVCFRAME_INSTALL_PATH . '/site');
 
-require(MVCFRAME_INSTALL_PATH.'/src/CMvcframe/bootstrap.php');
+require(MVCFRAME_INSTALL_PATH.'/src/bootstrap.php');
 
 $mv = CMvcframe::Instance();
 
