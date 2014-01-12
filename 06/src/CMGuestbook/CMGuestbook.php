@@ -2,7 +2,7 @@
 /**
  * A model for a guestbok, to show off some basic controller & model-stuff.
  * 
- * @package Mvcframe
+ * @package LydiaCore
  */
 class CMGuestbook extends CObject implements IHasSQL {
 

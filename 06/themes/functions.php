@@ -37,7 +37,7 @@ function get_debug() {
     $html .= "<hr><h3>Debuginformation</h3><p>The content of CMvcframe:</p><pre>" . htmlent(print_r($mv, true)) . "</pre>";
   }    
   if(isset($mv->config['debug']['session']) && $mv->config['debug']['session']) {
-    $html .= "<hr><h3>SESSION</h3><p>The content of CMvcframe->session:</p><pre>" . htmlent(print_r($mv->session, true)) . "</pre>";
+    $html .= "<hr><h3>SESSION</h3><p>The content of CLydia->session:</p><pre>" . htmlent(print_r($mv->session, true)) . "</pre>";
     $html .= "<p>The content of \$_SESSION:</p><pre>" . htmlent(print_r($_SESSION, true)) . "</pre>";
   }    
   return $html;
@@ -62,6 +62,32 @@ function get_messages_from_session() {
 
 
 /**
+ * Login menu. Creates a menu which reflects if user is logged in or not.
+ */
+function login_menu() {
+  $mv = CMvcframe::Instance();
+  if($mv->user['isAuthenticated']) {
+    $items = "<a href='" . create_url('user/profile') . "'><img class='gravatar' src='" . get_gravatar(20) . "' alt=''> " . $mv->user['acronym'] . "</a> ";
+    if($mv->user['hasRoleAdministrator']) {
+      $items .= "<a href='" . create_url('acp') . "'>acp</a> ";
+    }
+    $items .= "<a href='" . create_url('user/logout') . "'>logout</a> ";
+  } else {
+    $items = "<a href='" . create_url('user/login') . "'>login</a> ";
+  }
+  return "<nav id='login-menu'>$items</nav>";
+}
+
+
+/**
+ * Get a gravatar based on the user's email.
+ */
+function get_gravatar($size=null) {
+  return 'http://www.gravatar.com/avatar/' . md5(strtolower(trim(CMvcframe::Instance()->user['email']))) . '.jpg?r=pg&amp;d=wavatar&amp;' . ($size ? "s=$size" : null);
+}
+
+
+/**
  * Prepend the base_url.
  */
 function base_url($url=null) {
@@ -71,9 +97,13 @@ function base_url($url=null) {
 
 /**
  * Create a url to an internal resource.
+ *
+ * @param string the whole url or the controller. Leave empty for current controller.
+ * @param string the method when specifying controller as first argument, else leave empty.
+ * @param string the extra arguments to the method, leave empty if not using method.
  */
-function create_url($url=null) {
-  return CMvcframe::Instance()->request->CreateUrl($url);
+function create_url($urlOrController=null, $method=null, $arguments=null) {
+  return CMvcframe::Instance()->request->CreateUrl($urlOrController, $method, $arguments);
 }
 
 

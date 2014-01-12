@@ -44,9 +44,21 @@ $mv->config['base_url'] = null;
 
 
 /**
+ * How to hash password of new users, choose from: plain, md5salt, md5, sha1salt, sha1.
+ */
+$mv->config['hashing_algorithm'] = 'sha1salt';
+
+
+/**
+ * Allow or disallow creation of new user accounts.
+ */
+$mv->config['create_new_users'] = true;
+
+
+/**
  * Define session name
  */
-$mv->config['session_name'] = preg_replace('/[:\.\/-_]/', '', $_SERVER["SERVER_NAME"]);
+$mv->config['session_name'] = preg_replace('/[:\.\/-_]/', '', __DIR__);
 $mv->config['session_key']  = 'mvcframe';
 
 
@@ -81,6 +93,8 @@ $mv->config['controllers'] = array(
   'index'     => array('enabled' => true,'class' => 'CCIndex'),
   'developer' => array('enabled' => true,'class' => 'CCDeveloper'),
   'guestbook' => array('enabled' => true,'class' => 'CCGuestbook'),
+  'user'      => array('enabled' => true,'class' => 'CCUser'),
+  'acp'       => array('enabled' => true,'class' => 'CCAdminControlPanel'),
 );
 
 /**

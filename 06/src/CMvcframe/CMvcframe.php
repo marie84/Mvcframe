@@ -10,16 +10,16 @@ class CMvcframe implements ISingleton {
          * Members
          */
         private static $instance = null;
-        public $config = null;
-        public $request = null;
-        public $data = null;
-        public $db = null;
-		public $views;
-		public $session;
+        public $config = array();
+        public $request;
+        public $data;
+        public $db;
+        public $views;
+        public $session;
+        public $user;
         public $timer = array();
-		
         
-
+        
         /**
          * Constructor
          */
@@ -42,11 +42,14 @@ class CMvcframe implements ISingleton {
                 
                 // Create a database object.
                 if(isset($this->config['database'][0]['dsn'])) {
-                  $this->db = new CMDatabase($this->config['database'][0]['dsn']);
+                  $this->db = new CDatabase($this->config['database'][0]['dsn']);
           }
           
           // Create a container for all views and theme data
           $this->views = new CViewContainer();
+
+          // Create a object for the user
+          $this->user = new CMUser($this);
   }
   
   
