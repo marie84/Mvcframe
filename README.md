@@ -1,4 +1,4 @@
-Mvcframe - my first mvc project as a student. Based on 'Lydia', a mvc framework. There is a tutorial with including the code behind it which i followed in creating this. 
+Mvcframe - my first mvc project as a student. Based on 'Lydia', a mvc framework. There is a tutorial with including the code behind it which i followed in creating this. Tutorial (in swedish) can be find here: http://dbwebb.se/forum/viewtopic.php?f=14&t=46 
 =================================================================
 
 Clone/Download 

@@ -1,8 +1,8 @@
 <?php
 /**
- * Main class for Mvcframe, holds everything.
+ * Main class for Lydia, holds everything.
  *
- * @package MvcframeCore
+ * @package LydiaCore
  */
 class CMvcframe implements ISingleton {
 
