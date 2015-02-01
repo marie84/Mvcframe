@@ -84,7 +84,7 @@ Creating a new page, and adding new content to that page:
 In the page file, page.tpl.php in folder kmom08/Mvcframe/06/site/src/CCMycontroller/ 
 following content: 
 
-<?php if($content['id']):?>
+//<?php if($content['id']):?>
   <h1><?=esc($content['title'])?></h1>
   <p><?=$content->GetFilteredData()?></p>
   <p class='smaller-text silent'><a href='<?=create_url("content/edit/{$content['id']}")?>'>edit</a> <a href='<?=create_url("content")?>'>
@@ -97,7 +97,7 @@ following content:
 <?php else: ?>
   <h1>Create Content</h1>
   <p>Create new content.</p>
-<?php endif; ?>
+<?php endif; ?>//
 
 
 And then in the file ccmycontroller I added a new function for this:
