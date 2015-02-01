@@ -69,12 +69,12 @@ $mv->config['menus'] = array(
 	
 To create new content to Mvcframe click on "Content" in the navigation menu. There you point your browser to the link "Create new content".
 In the form for this, includes:
- "title" - title of the page you want to create. 
- "key" - the keyword of the page. 
- "Content" - the content of your page. 
- "type" - what kind of content is it that you want to add? You type "post" , if its new content that you want to add to the current standard blog in 
+ -"title" - title of the page you want to create. 
+ -"key" - the keyword of the page. 
+ -"Content" - the content of your page. 
+ -"type" - what kind of content is it that you want to add? You type "post" , if its new content that you want to add to the current standard blog in 
  Mvcframe. Or if you want to create a new page you type "page". 
- "filter" - how you want to format the text, markdown or plain is recommended, converts to html and many other formats.
+ -"filter" - how you want to format the text, markdown or plain is recommended, converts to html and many other formats.
 
 After selecting this you click create button. 
 
@@ -82,23 +82,6 @@ After selecting this you click create button.
 Creating a new page, and adding new content to that page: 
 
 In the page file, page.tpl.php in folder kmom08/Mvcframe/06/site/src/CCMycontroller/ 
-following content: 
-
-//<?php if($content['id']):?>
-  <h1><?=esc($content['title'])?></h1>
-  <p><?=$content->GetFilteredData()?></p>
-  <p class='smaller-text silent'><a href='<?=create_url("content/edit/{$content['id']}")?>'>edit</a> <a href='<?=create_url("content")?>'>
-<?php else:?>
-  <p>404: No such page exists.</p>
-<?php endif;?>
-
-<?php if($content['created']): ?>
-  
-<?php else: ?>
-  <h1>Create Content</h1>
-  <p>Create new content.</p>
-<?php endif; ?>//
-
 
 And then in the file ccmycontroller I added a new function for this:
 
