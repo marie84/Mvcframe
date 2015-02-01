@@ -107,15 +107,14 @@ fill in the form how to create new content.
 Change standard theme of Mvcframe; style of your page; fonts, background, etc:
 
 themes/mytheme/style.css; 
-
-/** 
- * Description: Sample theme for site which extends the Lydia grid-theme.
- */
+ 
+  Description: Sample theme for site which extends the Lydia grid-theme.
+ 
 @import url(../../../themes/grid/style.css);
 
 html{background-color:#000000;}
 body{background-color:#CCFFFF;}
-#outer-wrap-header{background-color:#FFFFFF;border-bottom:2px solid #000000}
+outer-wrap-header{background-color:#FFFFFF;border-bottom:2px solid #000000}
 #outer-wrap-footer{background-color:#FFFFFF}
 a{color:#000000}
 #navbar ul.menu li a.selected{background-color:#FFFFFF;border-bottom:#FFFFFF}
