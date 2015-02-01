@@ -5,8 +5,9 @@
 /**
  * Structure
  */
-html{background-color:#eee;}
-body{margin:0;padding:0;color:#333;background-color:#fff;
+html{background-color:#F0F5FF
+;}
+body{margin:0;padding:0;color:#333;background-color:#F0F5FF;
   font: 1em Verdana, Arial, Helvetica, sans-serif;}
 
 #wrap-header {}

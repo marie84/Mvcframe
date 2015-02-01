@@ -35,14 +35,14 @@ body:before, body:after {
 }
 body:after { clear:both; }
 body {
-  color:#222222;
-  font:100.01% / 1.375 Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#000000;
+  font:Arial;
 }
 h1 {
   font-weight:normal;
   color:#111111;
   margin-bottom:22px;
-  font-family:Cambria, Georgia, Times, 'Times New Roman', serif;
+  font-family:Arial;
   font-size:2.375em;
   line-height:1.1579;
   border-bottom:1px solid #cccccc;
@@ -52,7 +52,7 @@ h2 {
   font-weight:normal;
   color:#111111;
   margin-bottom:22px;
-  font-family:Cambria, Georgia, Times, 'Times New Roman', serif;
+  font-family:Arial;
   font-size:1.875em;
   line-height:1.4667;
 }
@@ -60,7 +60,7 @@ h3 {
   font-weight:normal;
   color:#111111;
   margin-bottom:22px;
-  font-family:Cambria, Georgia, Times, 'Times New Roman', serif;
+  font-family:Arial;
   font-size:1.375em;
   line-height:1;
 }
@@ -68,7 +68,7 @@ h4 {
   font-weight:normal;
   color:#111111;
   margin-bottom:22px;
-  font-family:Cambria, Georgia, Times, 'Times New Roman', serif;
+  font-family:Arial;
   font-size:1.25em;
   line-height:1.1;
 }
@@ -76,7 +76,7 @@ h5 {
   font-weight:normal;
   color:#111111;
   margin-bottom:22px;
-  font-family:Cambria, Georgia, Times, 'Times New Roman', serif;
+  font-family:Arial;
   font-size:1em;
   font-weight:bold;
 }
@@ -84,7 +84,7 @@ h6 {
   font-weight:normal;
   color:#111111;
   margin-bottom:22px;
-  font-family:Cambria, Georgia, Times, 'Times New Roman', serif;
+  font-family:Arial;
   font-size:1em;
   font-weight:bold;
   margin-bottom:0;
@@ -157,14 +157,14 @@ textarea {
   height:15em;
 }
 html {
-  background-color:#eeeeee;
+  background-color:#000000;
   overflow:-moz-scrollbars-vertical;
   overflow-y:scroll;
 }
 body {
   margin:0;
   padding:0;
-  color:#333333;
+  color:#000000;
   background-color:#ffffff;
 }
 #outer-wrap-header {
@@ -239,7 +239,7 @@ body {
   border:2px solid #999999;
 }
 #navbar ul.menu li a.selected {
-  background:#cccccc;
+  background:#FFFFFF;
   border:2px solid #999999;
 }
 #inner-wrap-flash {
@@ -352,7 +352,7 @@ body {
 }
 #outer-wrap-footer {
   background-color:#eeeeee;
-  border-top:1px solid #bbbbbb;
+  border-top:1px solid #000000;
 }
 #inner-wrap-footer {
   width:960px;

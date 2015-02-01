@@ -124,13 +124,22 @@ $mv->config['menus'] = array(
     'home'      => array('label'=>'Home', 'url'=>'home'),
     'modules'   => array('label'=>'Modules', 'url'=>'module'),
     'content'   => array('label'=>'Content', 'url'=>'content'),
+	'about me'  => array('label'=>'About', 'url'=>'content'),
+	'blog'      => array('label'=>'Blog', 'url'=>'blog'),
     'guestbook' => array('label'=>'Guestbook', 'url'=>'guestbook'),
-    'blog'      => array('label'=>'Blog', 'url'=>'blog'),
+	'page' => array('label'=>'New Page', 'url'=>'my/page'),
+	
+	
+    
   ),
   'my-navbar' => array(
-    'home'      => array('label'=>'About Me', 'url'=>'my'),
-    'blog'      => array('label'=>'My Blog', 'url'=>'my/blog'),
+    'start'      => array('label'=>'Home', 'url'=>'home'),
+	'modules'      => array('label'=>'Modules', 'url'=>'module'),
+	'content'      => array('label'=>'Content', 'url'=>'content'),
+    'about me'      => array('label'=>'About Me', 'url'=>'my/'),
+	'blog'      => array('label'=>'My Blog', 'url'=>'my/blog'),
     'guestbook' => array('label'=>'Guestbook', 'url'=>'my/guestbook'),
+	'page' => array('label'=>'New Page', 'url'=>'my/page'),
   ),
 );
 
@@ -178,6 +187,6 @@ $mv->config['theme'] = array(
     'logo' => 'starlogo.png',
     'logo_width'  => 80,
     'logo_height' => 80,
-    'footer' => '<p>Mvcframe &copy; by Marie. 2014.</p>',
+    'footer' => '<p>Mvcframe &copy; by Marie. 2015. Based on Lydia.</p>',
   ),
 );
