@@ -115,13 +115,14 @@ themes/mytheme/style.css;
 html{background-color:#000000;}
 body{background-color:#CCFFFF;}
 outer-wrap-header{background-color:#FFFFFF;border-bottom:2px solid #000000}
-#outer-wrap-footer{background-color:#FFFFFF}
+outer-wrap-footer{background-color:#FFFFFF}
 a{color:#000000}
-#navbar ul.menu li a.selected{background-color:#FFFFFF;border-bottom:#FFFFFF}
+navbar ul.menu li a.selected{background-color:#FFFFFF;border-bottom:#FFFFFF}
 
 /themes/grid/style.css; 
 
-Change fonts on the body. Here i have put arial. The font family is now arial. 
+Change fonts on the body. Here i have put arial. The font family is now arial:
+ 
 body:after { clear:both; }
 body {
   color:#000000;
