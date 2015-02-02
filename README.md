@@ -10,13 +10,41 @@ Install Mvcframe:
 How to clone/download Mvcframe from github and install on server:
 
 1. Clone from gitbub with Putty; git clone https://github.com/marie84/Mvcframe.git
-2. After downloading the files, don´t forget to set the filepermissions on the files to 644 and folders to 755. Except for the 
+2. After downloading the files,dont forget to change the filepermissions on the  
 folder `data´ that should have permission 777, to make it writable.  
-3. Open the file htcaccess, which is found in: kmom08\Mvcframe\06 
+3. Open the 'htcaccess file'  
 There you change the path after the line "Rewritebase" to Mvcframe to the location which you place the files. For example; 
-RewriteBase /~mase13/phpmvc/kmom08/Mvcframe/06
-4. Initialise modules. Open up your webbrowser and type in the pathway to Mvcframe. On the front page it will appear instructions for installing some 
-modules, that have to be initialised, point your browser to that link; module/install.  
+RewriteBase /~mase13/phpmvc/kmom08/test/Mvcframe/06
+4. Initialise modules. Open up your webbrowser and type in the pathway to Mvcframe and open up the page. On the front page it will appear 
+instructions for installing some modules, that have to be initialised, point your browser to that link; module/install. Then message will come 
+on the page which says;
+
+The following modules were affected by this action.
+Results from installing modules. Module	Result
+CMUser	
+Successfully created the database tables and created a default admin user as root:root and an ordinary user as doe:doe.
+CMContent	
+Successfully created the database tables and created a default "Hello World" blog post, owned by you.
+CMGuestbook	
+Successfully created the database tables (or left them untouched if they already existed).
+ 
+If you dont have initilised the modules correctly, below is what will come up on your browser if you click on the links "about me" etc in navigationmenu;
+in other words, the datafile must be created. 
+
+Mvcframe: Uncaught exception:
+
+SQLSTATE[HY000]: General error: 1 no such table: Content
+
+#0 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/src/CDatabase/CDatabase.php(46): PDO->prepare('SELECT c.*, u.a...')
+#1 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/src/CMContent/CMContent.php(147): CDatabase->ExecuteSelectQueryAndFetchAll('SELECT c.*, u.a...', Array)
+#2 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/src/CMContent/CMContent.php(21): CMContent->LoadById(5)
+#3 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/site/src/CCMycontroller/CCMycontroller.php(17): CMContent->__construct(5)
+#4 [internal function]: CCMycontroller->Index()
+#5 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/src/CMvcframe/CMvcframe.php(100): ReflectionMethod->invokeArgs(Object(CCMycontroller), Array)
+#6 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/index.php(15): CMvcframe->FrontControllerRoute()
+#7 {main}
+
+
 
 
 Changes 
@@ -24,9 +52,9 @@ Changes
 
 Change logo, title of the website, the footer and navigationmenu:
 
-To change the title, logo, footer, go to the config file which you find in folder: kmom08\Mvcframe\06\site\config.php
+To change the title, logo, footer, go to the config file which you find in folder: 06/site\config.php
 Below is the present settings. The logo is now starlogo.png. The logo I use is the same image as the favicon. 
-The starlogo.png is found in folder phpmvc/kmom08/Mvcframe/06/site/themes/mytheme/
+The starlogo.png is found in folder 06/site/themes/mytheme/
 stars.png you can change to there, or you add a new one. 
 
 'header' => 'Mvcframe',
@@ -40,7 +68,7 @@ stars.png you can change to there, or you add a new one.
 
 The navigationmenu and to create new content;
 
-Below is present settings which is found in the config file; kmom08\Mvcframe\06\site\config.php; Home, modules, content, about me, my blog,guestbook; 
+Below is present settings which is found in the config file; \site\config.php; Home, modules, content, about me, my blog,guestbook; 
 these are the standard settings for Mvcframe. 
  
 $mv->config['menus'] = array(
@@ -81,7 +109,7 @@ After selecting this you click create button.
 
 Creating a new page, and adding new content to that page: 
 
-In the page file, page.tpl.php in folder kmom08/Mvcframe/06/site/src/CCMycontroller/ 
+In the page file, page.tpl.php in folder site/src/CCMycontroller/ 
 
 And then in the file ccmycontroller I added a new function for this:
 
