@@ -35,14 +35,7 @@ Mvcframe: Uncaught exception:
 
 SQLSTATE[HY000]: General error: 1 no such table: Content
 
-#0 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/src/CDatabase/CDatabase.php(46): PDO->prepare('SELECT c.*, u.a...')
-#1 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/src/CMContent/CMContent.php(147): CDatabase->ExecuteSelectQueryAndFetchAll('SELECT c.*, u.a...', Array)
-#2 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/src/CMContent/CMContent.php(21): CMContent->LoadById(5)
-#3 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/site/src/CCMycontroller/CCMycontroller.php(17): CMContent->__construct(5)
-#4 [internal function]: CCMycontroller->Index()
-#5 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/src/CMvcframe/CMvcframe.php(100): ReflectionMethod->invokeArgs(Object(CCMycontroller), Array)
-#6 /home/saxon/students/20131/mase13/www/phpmvc/kmom08/test/Mvcframe/06/index.php(15): CMvcframe->FrontControllerRoute()
-#7 {main}
+
 
 
 
