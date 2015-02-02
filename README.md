@@ -7,9 +7,9 @@ Mvcframe
 
 Install Mvcframe:
 
-How to download Mvcframe from github and install on server:
+How to clone/download Mvcframe from github and install on server:
 
-1. Clone from gitbub; git clone git://github.com/marie84/Mvcframe.git
+1. Clone from gitbub with Putty; git clone https://github.com/marie84/Mvcframe.git
 2. After downloading the files, don´t forget to set the filepermissions on the files to 644 and folders to 755. Except for the 
 folder `data´ that should have permission 777, to make it writable.  
 3. Open the file htcaccess, which is found in: kmom08\Mvcframe\06 
